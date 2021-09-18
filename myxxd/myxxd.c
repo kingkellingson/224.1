@@ -48,7 +48,7 @@ void printDataAsHex(unsigned char *data, size_t size) {
     if (counter % 2 != 0){
       printf ("_");
     }
-    printf("%x", data[i]);
+    printf("%02x", data[i]);
     
     
   }
