@@ -45,10 +45,11 @@ void printDataAsHex(unsigned char *data, size_t size) {
   int counter = 0;
   for (int i = 0; i < size; ++i) { //for every letter in the array
     ++counter;
-    printf("12");
     if (counter % 2 != 0){
       printf ("_");
     }
+    printf("12");
+    
     
   }
   //printf("TODO 1: printDataAsHex (2)");
