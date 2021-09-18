@@ -45,7 +45,7 @@ void printDataAsHex(unsigned char *data, size_t size) {
   for (int i = 0; i < size; ++i) { //for every letter in the array
     printf("**_");
   }
-  /printf("TODO 1: printDataAsHex (2)");
+  //printf("TODO 1: printDataAsHex (2)");
 }
 
 /**
