@@ -42,8 +42,14 @@ FILE *parseCommandLine(int argc, char **argv, int *bits) {
  * size: the size of the array
  **/
 void printDataAsHex(unsigned char *data, size_t size) {
+  int counter = 0;
   for (int i = 0; i < size; ++i) { //for every letter in the array
-    printf("**_");
+    ++counter;
+    printf("12");
+    if (counter % 2 != 0){
+      printf ("_")
+    }
+    
   }
   //printf("TODO 1: printDataAsHex (2)");
 }
