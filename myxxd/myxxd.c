@@ -43,12 +43,18 @@ FILE *parseCommandLine(int argc, char **argv, int *bits) {
  **/
 void printDataAsHex(unsigned char *data, size_t size) {
   int counter = 0;
-  for (int i = 0; i < size; ++i) { //for every letter in the array
+  for (int i = 0; i < 16; ++i) { //for every letter in the array
     ++counter;
-    if (counter % 2 != 0){
-      printf ("_");
+    if (counter % 2 != 0){ //this prints out a space every 4 characters as needed
+      printf (" ");
     }
-    printf("%02x", data[i]);
+    if (i <= size) { //if we are within the size
+      printf("%02x", data[i]);
+    }
+    else {
+       printf("  ");
+    }
+    
     
     
   }
