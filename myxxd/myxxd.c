@@ -70,7 +70,19 @@ void printDataAsHex(unsigned char *data, size_t size) {
  * size: the size of the array
  **/
 void printDataAsChars(unsigned char *data, size_t size) {
-  printf("TODO 2: printDataAsChars test (3)");
+  
+  while(i < size) {
+      c = data[i];
+      if(c < ' ' || c > '~') {
+        printf("%c", c);
+        ++i;
+      }
+      else {
+        printf(".");
+      }
+  }
+  
+  //printf("TODO 2: printDataAsChars test (3)");
 }
 
 void readAndPrintInputAsHex(FILE *input) {
