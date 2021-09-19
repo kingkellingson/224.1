@@ -48,7 +48,7 @@ void printDataAsHex(unsigned char *data, size_t size) {
     if (counter % 2 != 0){ //this prints out a space every 4 characters as needed
       printf (" ");
     }
-    if (i <= size) { //if we are within the size
+    if (i < size) { //if we are within the size
       printf("%02x", data[i]);
     }
     else {
