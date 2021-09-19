@@ -119,6 +119,7 @@ void printDataAsBits (unsigned char *data, size_t size) {
       else {
         printf("    ");
       }
+    }
 }
 
 /**
