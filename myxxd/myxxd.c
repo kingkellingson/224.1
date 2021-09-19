@@ -102,7 +102,7 @@ void readAndPrintInputAsHex(FILE *input) {
 
 
 void printDataAsBits (unsigned char *data, size_t size) {
-  for (int i = 0; i < 16; ++i) { //for every letter in the array
+  for (int i = 0; i < 6; ++i) { //for every letter in the array
       printf (" ");
     if (i < size) { //if we are within the size
       int byte = data[i]; //get the number
