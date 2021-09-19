@@ -127,7 +127,7 @@ void printDataAsBits (unsigned char *data, size_t size) {
           }
           byte = byte / 2;
         }
-        printf("%d", eightBit);
+        printf("%s", eightBit);
         //printf("%04x", data[i]);
       }
       else {
