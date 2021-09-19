@@ -72,8 +72,8 @@ void printDataAsHex(unsigned char *data, size_t size) {
 void printDataAsChars(unsigned char *data, size_t size) {
   int i = 0;
   while(i < size) {
-      char c = data[i];
-      if(c < ' ' || c > '~') {
+      int c = data[i];
+      if(c <= ' ' || c >= '~') {
         printf("%c", c);
         ++i;
       }
