@@ -74,12 +74,16 @@ void printDataAsChars(unsigned char *data, size_t size) {
         printf("%c", c);
         ++i;
       }
+      else if (c = '\n') {
+        printf(".");
+        ++i;
+      }
       else {
         printf(".");
         ++i;
       }
   }
-  printf(".");
+ // printf(".");
 }
 
 void readAndPrintInputAsHex(FILE *input) {
