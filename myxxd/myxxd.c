@@ -83,7 +83,6 @@ void printDataAsChars(unsigned char *data, size_t size) {
         ++i;
       }
   }
- // printf(".");
 }
 
 void readAndPrintInputAsHex(FILE *input) {
@@ -105,7 +104,7 @@ void readAndPrintInputAsHex(FILE *input) {
 void printDataAsBits (unsigned char *data, size_t size) {
 
 
-  printf("TODO 3: printDataAsBits\n");
+  printf("TODO 3: printDataAsBits");
 
 
     // int counter = 0;
@@ -143,7 +142,7 @@ void readAndPrintInputAsBits(FILE *input) {
       printf("  ");
       printDataAsChars(data, numBytesRead);
       printf("\n");
-      numBytesRead = fread(data, 1, 16, input);
+      numBytesRead = fread(data, 1, 6, input);
     }
 
 }
