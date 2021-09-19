@@ -70,9 +70,9 @@ void printDataAsHex(unsigned char *data, size_t size) {
  * size: the size of the array
  **/
 void printDataAsChars(unsigned char *data, size_t size) {
-  
+  int i = 0;
   while(i < size) {
-      c = data[i];
+      char c = data[i];
       if(c < ' ' || c > '~') {
         printf("%c", c);
         ++i;
