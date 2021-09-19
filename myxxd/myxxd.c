@@ -79,6 +79,7 @@ void printDataAsChars(unsigned char *data, size_t size) {
       }
       else {
         printf(".");
+        ++i;
       }
   }
   
