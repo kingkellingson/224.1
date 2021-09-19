@@ -101,13 +101,22 @@ void readAndPrintInputAsHex(FILE *input) {
 }
 
 
+/**
+ * Writes data to stdout in binary.
+ *
+ * See myxxd.md for details.
+ *
+ * data: an array of no more than 6 characters
+ * size: the size of the array
+ **/
 void printDataAsBits (unsigned char *data, size_t size) {
+
   for (int i = 0; i < 6; ++i) { //for every letter in the array
-      printf (" ");
+    printf (" ");
+      
     if (i < size) { //if we are within the size
       int byte = data[i]; //get the number
       int eightBit [8]; //make an array of ints (the 8-bit part)
-      //printf("%d", data[i]); 
       for (int j = 7; j >= 0; --j) { //for each of the 8 bits
         if (byte % 2 == 1) {/* store a 1 for the bit */
           eightBit[j] = 1;
@@ -120,9 +129,6 @@ void printDataAsBits (unsigned char *data, size_t size) {
       for (int k = 0; k < 8; ++k) {//print out the array
         printf("%d", eightBit[k]);
       }
-
-      //printf("%s", eightBit);
-      //printf("%04x", data[i]);
     }
     else {
       printf("        ");
