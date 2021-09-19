@@ -97,10 +97,11 @@ void readAndPrintInputAsHex(FILE *input) {
   }
 }
 
-void printDataAsBits() (unsigned char *data, size_t size) {
+
+void printDataAsBits (unsigned char *data, size_t size) {
 
 
-printf("TODO 3: printDataAsBits\n");
+  printf("TODO 3: printDataAsBits\n");
 
 
     // int counter = 0;
