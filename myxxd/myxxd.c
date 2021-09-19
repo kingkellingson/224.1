@@ -54,9 +54,6 @@ void printDataAsHex(unsigned char *data, size_t size) {
     else {
        printf("  ");
     }
-    
-    
-    
   }
   //printf("TODO 1: printDataAsHex (2)");
 }
@@ -82,8 +79,7 @@ void printDataAsChars(unsigned char *data, size_t size) {
         ++i;
       }
   }
-  
-  //printf("TODO 2: printDataAsChars test (3)");
+  printf(".");
 }
 
 void readAndPrintInputAsHex(FILE *input) {
@@ -101,6 +97,26 @@ void readAndPrintInputAsHex(FILE *input) {
   }
 }
 
+void printDataAsBits() (unsigned char *data, size_t size) {
+
+
+printf("TODO 3: printDataAsBits\n");
+
+
+    // int counter = 0;
+    // for (int i = 0; i < 16; ++i) { //for every letter in the array
+    //   ++counter;
+    //   if (counter % 2 != 0){ //this prints out a space every 4 characters as needed
+    //     printf (" ");
+    //   }
+    //   if (i < size) { //if we are within the size
+    //     printf("%02x", data[i]);
+    //   }
+    //   else {
+    //     printf("  ");
+    //   }
+}
+
 /**
  * Bits output for xxd.
  *
@@ -109,7 +125,22 @@ void readAndPrintInputAsHex(FILE *input) {
  * input: input stream
  **/
 void readAndPrintInputAsBits(FILE *input) {
-  printf("TODO 3: readAndPrintInputAsBits\n");
+  
+
+
+  unsigned char data[6];
+    int numBytesRead = fread(data, 1, 6, input);
+    unsigned int offset = 0;
+    while (numBytesRead != 0) {
+      printf("%08x:", offset);
+      offset += numBytesRead;
+      printDataAsBits(data, numBytesRead);
+      printf("  ");
+      printDataAsChars(data, numBytesRead);
+      printf("\n");
+      numBytesRead = fread(data, 1, 16, input);
+    }
+
 }
 
 int main(int argc, char **argv) {
