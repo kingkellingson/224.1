@@ -114,16 +114,20 @@ void printDataAsBits (unsigned char *data, size_t size) {
         printf (" ");
       }
       if (i < size) { //if we are within the size
-        //int byte = data[i]
-        printf("%d", data[i]);
-        // for (int j = 0; j < 8; ++j) {
-        //   if (x % 2 == 1) {
-        //     /* store a 1 for the bit */
-        //   } else {
-        //     /* store a 0 for the bit */
-        //   }
-        //   x = x / 2;
-        // }
+        int byte = data[i] //get the number
+        int eightBit [8]; //make an array of ints (the 8-bit part)
+        //printf("%d", data[i]); 
+        for (int j = 0; j < 8; ++j) { //for each of the 8 bits
+          if (byte % 2 == 1) {
+            eightBit[j] = 1
+            /* store a 1 for the bit */
+          } else {
+            eightBit[j] = 0
+            /* store a 0 for the bit */
+          }
+          byte = byte / 2;
+        }
+        printf("%d", eightBit);
         //printf("%04x", data[i]);
       }
       else {
