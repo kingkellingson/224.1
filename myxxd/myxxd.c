@@ -119,7 +119,7 @@ void printDataAsBits (unsigned char *data, size_t size) {
 
       for (int k = 0; k < 8; ++k) {//print out the array
         char c = (char)eightBit[k];
-        printf(c);
+        printf("%c", c);
       }
 
       //printf("%s", eightBit);
