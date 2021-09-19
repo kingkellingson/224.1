@@ -107,18 +107,18 @@ void printDataAsBits (unsigned char *data, size_t size) {
   printf("TODO 3: printDataAsBits");
 
 
-    // int counter = 0;
-    // for (int i = 0; i < 16; ++i) { //for every letter in the array
-    //   ++counter;
-    //   if (counter % 2 != 0){ //this prints out a space every 4 characters as needed
-    //     printf (" ");
-    //   }
-    //   if (i < size) { //if we are within the size
-    //     printf("%02x", data[i]);
-    //   }
-    //   else {
-    //     printf("  ");
-    //   }
+    int counter = 0;
+    for (int i = 0; i < 16; ++i) { //for every letter in the array
+      ++counter;
+      if (counter % 2 != 0){ //this prints out a space every 4 characters as needed
+        printf (" ");
+      }
+      if (i < size) { //if we are within the size
+        printf("%04x", data[i]);
+      }
+      else {
+        printf("    ");
+      }
 }
 
 /**
